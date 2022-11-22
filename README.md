@@ -35,3 +35,11 @@ GitHubを開いて自分のリポジトリから`Contribute`を押すと`Open pu
 pushすると開いているPRに自動的にそのコミットが反映されます
 7. マージ  
 PRに問題がなくなったらメインのリポジトリにマージします
+
+## 参考になりそうなリンク
+### 全般
+- MDN https://developer.mozilla.org/ja/docs/Web  
+htmlやjavascriptの解説はだいたい載っているので困ったらとりあえずここを見ましょう
+### TypeScript
+- サバイバルTypeScript https://typescriptbook.jp/  
+型の書き方とかはここを見るといいと思います
