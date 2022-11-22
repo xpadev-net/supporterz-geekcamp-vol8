@@ -1,3 +1,5 @@
+※セットアップの4番、開発の3~4番はエディターのgit管理機能を使用しても構いません
+
 ## セットアップ方法
 
 1. Nodejsのインストール   
@@ -19,7 +21,8 @@ https://www.sejuku.net/blog/73444
 2. ファイルを編集  
 変更を保存すると自動でリロードして反映される
 3. 変更をコミットする  
-`git commit`
+`git add .`  
+`git commit`  
 4. 変更をGithub上にpushする  
 `git push`
 5. PRを出す  
