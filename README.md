@@ -36,6 +36,15 @@ pushすると開いているPRに自動的にそのコミットが反映され�
 7. マージ  
 PRに問題がなくなったらメインのリポジトリにマージします
 
+## 方針
+1. CSS  
+基本CSS Modulesで書き、動的に変更する必要のあるものはstyled-componentsを使う
+2. コンポーネント  
+基本1ファイル1コンポーネント
+3. エクスポート方法  
+基本named export  
+ただしNextjsのページはdefault export
+
 ## 参考になりそうなリンク
 ### 全般
 - MDN https://developer.mozilla.org/ja/docs/Web  
