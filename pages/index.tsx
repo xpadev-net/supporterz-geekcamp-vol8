@@ -2,17 +2,18 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { TabList } from "../components/TabList";
 import { TasksContext } from "../contexts/tasks";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Storage } from "../libs/localStorage";
 
 export default function Home() {
-  const [data, setData] = useState(Storage.get());
-  const [isMobile, setIsMobile] = useState(window?.innerWidth > 600);
+  const [data, setData] = useState<Tab[]>([]);
+  const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth > 600);
   };
-  useLayoutEffect(() => {
+  useEffect(() => {
+    setData(Storage.get());
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
