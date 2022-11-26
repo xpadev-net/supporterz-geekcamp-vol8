@@ -1,9 +1,9 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import { TabList } from "../components/TabList";
-import { TasksContext } from "../contexts/tasks";
+import Styles from "@/styles/Home.module.css";
+import { TabList } from "@/components/TabList";
+import { TasksContext } from "@/contexts/tasks";
 import { useEffect, useState } from "react";
-import { Storage } from "../libs/localStorage";
+import { Storage } from "@/libs/localStorage";
 
 export default function Home() {
   const [data, setData] = useState<Tab[]>([]);
