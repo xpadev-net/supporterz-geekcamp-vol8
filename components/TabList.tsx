@@ -9,14 +9,13 @@ const TabList = ({ tabs }: props) => {
   const { isMobile } = useContext(tasksContext);
 
   return (
-    <div>
-      <ul className="TabList">
-        {tabs.map((tab) => <li>{tab.title}</li>)}
-        <li>
-          <button>+</button>
-        </li>
-      </ul>
-    </div>
+    <ul className={`${Styles.TabList} ${isMobile && Styles.mobile}}`}
+    >
+      {tabs.map((tab) => <li>{tab.title}</li>)}
+      <li>
+        <button>+</button>
+      </li>
+    </ul>
   )
 };
 export { TabList };
