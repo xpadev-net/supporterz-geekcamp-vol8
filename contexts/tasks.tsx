@@ -3,6 +3,7 @@ import { createContext, ReactNode } from "react";
 type tasksContext = {
   data?: Tab[];
   setData?: (val: Tab[]) => void;
+  isMobile?: boolean;
 };
 
 type contextProps = {
