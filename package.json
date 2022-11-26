@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint&&npm run eslint&&npm run check-types",
     "check-types": "npx tsc --noEmit",
-    "eslint": "eslint **/*.ts*",
-    "eslint:fix": "eslint **/*.ts* --fix",
+    "eslint": "eslint */**/*.ts*",
+    "eslint:fix": "eslint */**/*.ts* --fix",
     "lint:fix": "npm run format&&npm run eslint:fix&&npm run check-types",
     "format": "prettier --write \"**/*.{tsx,ts,js,json,css,scss}\"",
     "prepare": "husky install"
