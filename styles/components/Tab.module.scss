@@ -1,0 +1,16 @@
+.Tab {
+  display: inline-block;
+  padding: 5px 10px;
+  .mobile {
+    padding: 10px 5px;
+    writing-mode: vertical-rl;
+  }
+  .selected {
+    :not(.mobile) {
+      border-right: #ed7d31;
+    }
+    .mobile {
+      border-bottom: #ed7d31;
+    }
+  }
+}
