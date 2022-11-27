@@ -5,23 +5,6 @@ type props = {
 };
 
 const Task = ({ task }: props) => {
-  class DateInfo {
-    constructor(
-      private month: number,
-      private date: number,
-      private day: string,
-      private hour: number,
-      private minute: number
-    ) {}
-    intro(this: DateInfo) {
-      console.log("期限:");
-      console.log(
-        `～${this.month}/${this.date}(${this.day}) ${this.hour}:${this.minute}`
-      );
-    }
-  }
-  const dateInfo = new DateInfo(1, 1, "月", 23, 59);
-
   return (
     <Box
       sx={{
@@ -40,13 +23,13 @@ const Task = ({ task }: props) => {
             <div className="taskTitle-style">{task.title}</div>
           </div>
           <div className="taskExp-box">
-            <div className={`${dateInfo.intro()} taskExp-style`} />
+            <div className="taskExp-style">{task.expired}</div>
           </div>
           <div className="taskCont-box">
             <div className="taskCont-style">{task.content}</div>
           </div>
           <Slider
-            defaultValue={0}
+            defaultValue={(task as TaskNoChild).progress}
             aria-label="Default"
             valueLabelDisplay="auto"
           />
