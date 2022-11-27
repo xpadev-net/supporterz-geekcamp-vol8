@@ -4,7 +4,7 @@ import Styles from "@/styles/components/Tab.module.scss";
 
 type props = {
   tab: Tab;
-  onClick: MouseEventHandler<HTMLDivElement>;
+  onClick?: MouseEventHandler<HTMLDivElement>;
 };
 const Tab = ({ tab, onClick }: props) => {
   const { isMobile } = useContext(tasksContext);
