@@ -1,5 +1,6 @@
 import { MouseEventHandler, useContext } from "react";
 import { tasksContext } from "@/contexts/tasks";
+import { Tab } from "@/components/Tab";
 import Styles from "@/styles/components/TabList.module.scss";
 
 type props = {
@@ -10,20 +11,19 @@ const TabList = ({ tabs, onClick }: props) => {
   const { isMobile } = useContext(tasksContext);
 
   return (
-    <ul className={`${Styles.TabList} ${isMobile && Styles.mobile}`} >
+    <div className={`${Styles.TabList} ${isMobile && Styles.mobile}`} >
       {tabs.map((tab) =>
-        <li>
-          <div
-            className={`${tab.isSelected && Styles.selected}`}
-            onClick={onClick}
-          >
-            {tab.isSelected}
-          </div>
-        </li>)}
-      <li>
+        <Tab
+          className={`${tab.isSelected && Styles.selected}`}
+          onClick={onClick}
+        >
+          {tab.isSelected}
+        </Tab>
+      )}
+      <div>
         <button>+</button>
-      </li>
-    </ul>
+      </div>
+    </div>
   )
 };
 export { TabList };
