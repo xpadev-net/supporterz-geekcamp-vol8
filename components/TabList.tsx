@@ -11,8 +11,8 @@ const TabList = ({ tabs }: props) => {
   return (
     <ul className={`${Styles.TabList} ${isMobile && Styles.mobile}`}>
       {tabs.map((tab) =>
-        <li>
-          <button className={`${tab.isSelected && Styles.selected}`}>{tab.isSelected}</button>
+        <li className={`${tab.isSelected && Styles.selected}`}>
+          {tab.isSelected}
         </li>)}
       <li>
         <button>+</button>
