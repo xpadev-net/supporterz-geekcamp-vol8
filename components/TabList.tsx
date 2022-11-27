@@ -14,22 +14,23 @@ const TabList = ({ tabs }: props) => {
     return <></>;
   }
   return (
-    <div className={`${Styles.TabList} ${isMobile && Styles.mobile}`} >
-      {tabs.map((tab) =>
+    <div className={`${Styles.TabList} ${isMobile && Styles.mobile}`}>
+      {tabs.map((tab, index) => (
         <Tab
+          key={index}
           onClick={() => {
-            tabs.forEach((value) => value.isSelected = false)
-            tab.isSelected = true
-            Storage.set(data)
-            setcount(count + 1)
+            tabs.forEach((value) => (value.isSelected = false));
+            tab.isSelected = true;
+            Storage.set(data);
+            setcount(count + 1);
           }}
           tab={tab}
         />
-      )}
+      ))}
       <div>
         <button>+</button>
       </div>
     </div>
-  )
+  );
 };
 export { TabList };
