@@ -10,7 +10,7 @@ export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth > 600);
+    setIsMobile(window.innerWidth < 600);
   };
   useEffect(() => {
     setData(Storage.get());

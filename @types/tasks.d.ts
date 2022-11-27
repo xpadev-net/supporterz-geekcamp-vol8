@@ -3,7 +3,7 @@ type TaskNoChild = {
   title: string;
   content: string;
   expired?: number;
-  progress: number;
+  progress?: number;
   isSelected: boolean;
 };
 type TaskChild = {
