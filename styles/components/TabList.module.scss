@@ -1,0 +1,25 @@
+.TabList {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.TabList div {
+  width: 100%;
+  border: solid 1px #333;
+  text-align: center;
+  button {
+    width: 100%;
+  }
+  .selected {
+    :not(.mobile) {
+      border-right: #ed7d31;
+    }
+
+    .mobile {
+      border-bottom: red;
+    }
+  }
+}
