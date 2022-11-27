@@ -1,9 +1,11 @@
 .Tab {
   display: inline-block;
-  padding: 5px 10px;
-  .mobile {
+  :not(.mobile) {
     padding: 10px 5px;
     writing-mode: vertical-rl;
+  }
+  .mobile {
+    padding: 5px 10px;
   }
   .selected {
     :not(.mobile) {
