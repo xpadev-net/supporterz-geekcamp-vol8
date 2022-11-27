@@ -1,4 +1,4 @@
-import { MouseEventHandler, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { tasksContext } from "@/contexts/tasks";
 import { Tab } from "@/components/Tab";
 import Styles from "@/styles/components/TabList.module.scss";
