@@ -9,9 +9,11 @@ const TabList = ({ tabs }: props) => {
   const { isMobile } = useContext(tasksContext);
 
   return (
-    <ul className={`${Styles.TabList} ${isMobile && Styles.mobile}}`}
-    >
-      {tabs.map((tab) => <li>{tab.title}</li>)}
+    <ul className={`${Styles.TabList} ${isMobile && Styles.mobile}`}>
+      {tabs.map((tab) =>
+        <li>
+          <button className={`${tab.isSelected && Styles.selected}`}>{tab.isSelected}</button>
+        </li>)}
       <li>
         <button>+</button>
       </li>
