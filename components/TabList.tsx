@@ -17,7 +17,7 @@ const TabList = ({ tabs, onClick }: props) => {
             className={`${tab.isSelected && Styles.selected}`}
             onClick={onClick}
           >
-            {tab.title}
+            {tab.isSelected}
           </div>
         </li>)}
       <li>
