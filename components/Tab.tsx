@@ -13,7 +13,7 @@ const Tab = ({ tab, onClick }: props) => {
     <div
       className={`${Styles.Tab} ${isMobile && Styles.mobile} ${
         tab.isSelected && Styles.selected
-      }`}
+        }`}
       onClick={onClick}
     >
       {tab.title}

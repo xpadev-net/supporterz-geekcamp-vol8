@@ -1,18 +1,24 @@
-import { useContext } from "react";
+import { MouseEventHandler, useContext } from "react";
 import { tasksContext } from "@/contexts/tasks";
 import Styles from "@/styles/components/TabList.module.scss";
 
 type props = {
   tabs: Tab[];
+  onClick?: MouseEventHandler<HTMLDivElement>;
 };
-const TabList = ({ tabs }: props) => {
+const TabList = ({ tabs, onClick }: props) => {
   const { isMobile } = useContext(tasksContext);
 
   return (
-    <ul className={`${Styles.TabList} ${isMobile && Styles.mobile}`}>
+    <ul className={`${Styles.TabList} ${isMobile && Styles.mobile}`} >
       {tabs.map((tab) =>
-        <li className={`${tab.isSelected && Styles.selected}`}>
-          {tab.isSelected}
+        <li>
+          <div
+            className={`${tab.isSelected && Styles.selected}`}
+            onClick={onClick}
+          >
+            {tab.title}
+          </div>
         </li>)}
       <li>
         <button>+</button>
